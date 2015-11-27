@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <script>
+    var pc_width = 1080;
+    var device = (screen.width < 600 ? 'sp' : 'pc');
+    var view_mode = (device == 'pc' || document.cookie.indexOf('view_mode=pc') != -1 ? 'pc' : 'sp');
+    if (device == 'sp' && view_mode == 'pc') {
+      document.getElementById('viewport').setAttribute('content', 'width=' + pc_width + ',initial-scale=1');
+    }
+    $(function () {
+      if (device == 'sp') {
+        if (view_mode == 'pc') {
+          $('.sp-mode').on('click', function () {
+            var date = new Date();
+            date.setTime(0);
+            document.cookie = 'view_mode=;expires=' + date.toGMTString();
+            location.reload(false);
+          }).show();
+        } else {
+          $('.pc-mode').on('click', function () {
+            document.cookie = 'view_mode=pc';
+            location.reload(false);
+          }).show();
+        }
+      }
+    });
+  </script>
+  <link rel="stylesheet" href="css/twoblo.css">
+  <link href='https://fonts.googleapis.com/css?family=Plaster|Krona+One|Sonsie+One|Codystar|#|#' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <title> TwoBlo | つーぶろ </title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="js-accordion" class="header">
+      <div class="header__heading">
+        <h1 class="logo">accordion menu</h1>
+        <span class="menu-button">
+                    <i></i>
+                </span>
+      </div>
+      <nav class="nav-content">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="js-cover"></div>
+    <div id="contents">
+      <div class="content">
+        <p>100px</p>
+      </div>
+      <div class="content">
+        <p>200px</p>
+      </div>
+      <div class="content">
+        <p>300px</p>
+      </div>
+      <div class="content">
+        <p>400px</p>
+      </div>
+      <div class="content">
+        <p>500px</p>
+      </div>
+      <div class="content">
+        <p>600px</p>
+      </div>
+      <div class="content">
+        <p>700px</p>
+      </div>
+      <div class="content">
+        <p>800px</p>
+      </div>
+      <div class="content">
+        <p>900px</p>
+      </div>
+      <div class="content">
+        <p>1000px</p>
+      </div>
+      <div class="content">
+        <p>1100px</p>
+      </div>
+      <div class="content">
+        <p>1200px</p>
+      </div>
+      <div class="content">
+        <p>1300px</p>
+      </div>
+      <div class="content">
+        <p>1400px</p>
+      </div>
+      <div class="content">
+        <p>1500px</p>
+      </div>
+      <div class="content">
+        <p>1600px</p>
+      </div>
+      <div class="content">
+        <p>1700px</p>
+      </div>
+      <div class="content">
+        <p>1800px</p>
+      </div>
+      <div class="content">
+        <p>1900px</p>
+      </div>
+      <div class="content">
+        <p>2000px</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
